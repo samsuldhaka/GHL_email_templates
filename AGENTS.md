@@ -8,6 +8,10 @@
     {
       "name": "weekend-attendance-appreciation.html",
       "url": "https://raw.githubusercontent.com/samsuldhaka/GHL_email_templates/refs/heads/main/weekend-attendance-appreciation.html"
+    },
+    {
+      "name": "congratulations-2027.html",
+      "url": "https://raw.githubusercontent.com/samsuldhaka/GHL_email_templates/refs/heads/main/congratulations-2027.html"
     }
   ]
 }

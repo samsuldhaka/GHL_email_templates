@@ -1,3 +1,9 @@
+---
+name: ghl-email-template
+description: Pushes HTML email templates to GitHub, tracks them in AGENTS.md, and integrates with GoHighLevel (GHL).
+compatibility: opencode
+---
+
 # GHL Email Template Skill
 
 Pushes HTML email templates to the GitHub repo and tracks them in `AGENTS.md` with their raw GitHub URLs. The raw URLs can be used with GHL MCP server tools (e.g., `ghl_emails_create-template` with `importURL`).
