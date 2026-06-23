@@ -50,8 +50,19 @@ git commit -m "Update AGENTS.md with <filename>"
 git push origin main
 ```
 
-### Step 5 — Confirm
-Tell the user the template is pushed and registered, including the raw URL so they can use it with GHL tools.
+### Step 5 — Create GHL email template (optional)
+If the user also wants the template created in GHL, use `ghl_emails_create-template`:
+
+- `type`: `"html"`
+- `name`: A descriptive name (e.g., `"Canada Day Email"`)
+- `title`: Same as name
+- `builderVersion`: `"2"`
+- `templateDataUrl`: The raw GitHub URL from AGENTS.md
+
+This loads the HTML from the raw URL into a GHL email template. The template can then be used in campaigns and automations.
+
+### Step 6 — Confirm
+Tell the user the template is pushed, tracked in AGENTS.md, and (if requested) created in GHL. Provide the raw URL so they can reference it elsewhere.
 
 ## AGENTS.md structure
 
@@ -74,3 +85,5 @@ The file is pure JSON (not wrapped in markdown fences):
 - Always use `git mv` if renaming files to preserve history
 - The base URL follows the pattern: `https://raw.githubusercontent.com/{owner}/{repo}/refs/heads/{branch}/`
 - Only push files that are in the workspace directory
+- For GHL template creation, use `templateDataUrl` (not `importURL`). The `importURL` field only works with Mailchimp/ActiveCampaign URLs when `type: "import"`.
+- After creating a GHL template, the raw URL remains useful for blog posts (`ghl_blogs_create-blog-post` with `rawHTML`), email sending (`ghl_conversations_send-a-new-message` with `html`), or other GHL tools.
